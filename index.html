@@ -241,6 +241,9 @@ const ESPECES=[NAIN,...[2,3,4,5,6,7,8,9].map(n=>({
 
 const view=document.getElementById("view");
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const md=s=>esc(s)
+  .replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>")
+  .replace(/\*(.+?)\*/g,"<em>$1</em>");
 const slug=n=>n.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
 const hue=i=>(i*40+200)%360;
 const portrait=(e,i)=>`<div class="card-img" style="--h:${hue(i)}">${e.image?`<img src="${esc(e.image)}" alt="${esc(e.nom)}" loading="lazy">`:`<span>${i+1}</span>`}</div>`;
