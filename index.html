@@ -24,6 +24,24 @@
     <script src="data/nain_ancestry.js"></script>
     <script src="data/nain_dons.js"></script>
     <script src="data/nain_heritages.js"></script>
+    <script src="data/kipkin_ancestry.js"></script>
+    <script src="data/kipkin_dons.js"></script>
+    <script src="data/kipkin_heritages.js"></script>
+    <script src="data/kralei_ancestry.js"></script>
+    <script src="data/kralei_dons.js"></script>
+    <script src="data/kralei_heritages.js"></script>
+    <script src="data/halfling_ancestry.js"></script>
+    <script src="data/halfling_dons.js"></script>
+    <script src="data/halfling_heritages.js"></script>
+    <script src="data/strix_ancestry.js"></script>
+    <script src="data/strix_dons.js"></script>
+    <script src="data/strix_heritages.js"></script>
+    <script src="data/leshy_ancestry.js"></script>
+    <script src="data/leshy_dons.js"></script>
+    <script src="data/leshy_heritages.js"></script>
+    <script src="data/lizardfolk_ancestry.js"></script>
+    <script src="data/lizardfolk_dons.js"></script>
+    <script src="data/lizardfolk_heritages.js"></script>
     <script src="data/page.js"></script>
     <script>
       ELVÉN.heritages = ELVÉN_HERITAGES;
@@ -33,7 +51,30 @@
       NAIN.heritages = NAIN_HERITAGES;
       NAIN.dons = NAIN_DONS;
     </script>
+     <script>
+      KIPKIN.heritages = KIPKIN_HERITAGES;
+      KIPKIN.dons = KIPKIN_DONS;
+    </script>
     <script>
+      KRALEI.heritages = KRALEI_HERITAGES;
+      KRALEI.dons = KRALEI_DONS;
+    </script> <script>
+      HALFLING.heritages = HALFLING_HERITAGES;
+      HALFLING.dons = HALFLING_DONS;
+    </script>
+    <script>
+      STRIX.heritages = STRIX_HERITAGES;
+      STRIX.dons = STRIX_DONS;
+    </script> <script>
+      LESHY.heritages = LESHY_HERITAGES;
+      LESHY.dons = LESHY_DONS;
+    </script>
+    <script>
+      LIZARDFOLK.heritages = LIZARDFOLK_HERITAGES;
+      LIZARDFOLK.dons = LIZARDFOLK_DONS;
+    </script>
+    <script>
+      
       /* ===== MODIFIE ICI : une entrée par espèce =====
    nom, image (chemin ou lien, ex. "images/elfe.jpg"), accroche, resume (texte de la carte),
    description (paragraphes), tags (traits PF2e), pv, taille, vitesse, bonus, defauts, vision,
@@ -44,48 +85,12 @@
       const ESPECES = [
         ELVÉN,
         NAIN,
-        ...[3, 4, 5, 6, 7, 8, 9].map((n) => ({
-          nom: "Espèce " + n,
-          image: "",
-          accroche: "Une courte phrase d’ambiance",
-          resume: "Résumé en une ou deux lignes.",
-          description: [
-            "Premier paragraphe de description : apparence, culture, place dans le monde.",
-            "Deuxième paragraphe si besoin.",
-          ],
-          tags: ["Humanoïde"],
-          pv: "8",
-          taille: "M",
-          vitesse: "7,5 m",
-          bonus: "Libre, Libre",
-          defauts: "Aucun",
-          vision: "Normale",
-          langues: "Commun",
-          languesSup: "Selon l’Intelligence",
-          infos: [],
-          capacites: [
-            {
-              titre: "Capacité spéciale",
-              texte: "Description de la capacité.",
-            },
-          ],
-          heritages: [
-            { titre: "Héritage 1", texte: "Description de l’héritage." },
-            { titre: "Héritage 2", texte: "Description de l’héritage." },
-          ],
-          dons: [
-            {
-              niveau: 1,
-              titre: "Don d’ascendance",
-              texte: "Description du don.",
-            },
-            {
-              niveau: 5,
-              titre: "Don d’ascendance",
-              texte: "Description du don.",
-            },
-          ],
-        })),
+        KIPKIN,
+        KRALEI,
+        HALFLING,
+        STRIX,
+        LESHY,
+        LIZARDFOLK
       ];
     </script>
         <!-- Code -->
