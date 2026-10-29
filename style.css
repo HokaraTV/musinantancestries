@@ -650,7 +650,10 @@ a {
   color: var(--accent);
 }
 
-.prose strong{font-weight:700;  -webkit-text-stroke:.5px currentColor;}
+.prose strong {
+  font-weight: 700;
+  -webkit-text-stroke: 0.5px currentColor;
+}
 
 @media (max-width: 900px) {
   .tabs {
