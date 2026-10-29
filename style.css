@@ -649,6 +649,9 @@ a {
   text-transform: uppercase;
   color: var(--accent);
 }
+
+.prose strong{font-weight:700;  -webkit-text-stroke:.5px currentColor;}
+
 @media (max-width: 900px) {
   .tabs {
     flex-wrap: nowrap;

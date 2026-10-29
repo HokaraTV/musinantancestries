@@ -6,7 +6,7 @@
 <title>Espèces jouables</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -138,7 +138,7 @@ function detail(i,k,j){
   view.className="page";
   view.innerHTML=`<div class="crumbs"><a href="#/">Accueil</a><span>›</span><a href="#/${slug(e.nom)}">${html(e.nom)}</a><span>›</span><span>${html(x.titre)}</span></div>
   <div class="ph"><p class="eyebrow">${label} · ${html(e.nom)}</p><h1>${html(x.titre)}</h1>${(tg=>tg.length?`<div class="tags">${tg.map(t=>`<span class="tag">${html(t)}</span>`).join("")}</div>`:"")([...(k==="don"?["Niveau "+x.niveau]:[]),...(x.action?[x.action]:[]),...(x.traits||[]),...(x.legacy?["Legacy Content"]:[])])}</div>
-  <div class="prose">${x.prereq?`<p><strong>Prerequisites</strong> ${html(x.prereq)}</p>`:""}${(x.meta||[]).map(([a,b])=>`<p><strong>${html(a)}</strong> ${html(b)}</p>`).join("")}${[].concat(x.texte).map(t=>`<p>${html(t)}</p>`).join("")}${x.source?`<p><em>Source: ${html(x.source)}</em></p>`:""}</div>
+  <div class="prose">${x.prereq?`<p><strong>Prerequisites</strong> ${html(x.prereq)}</p>`:""}${(x.meta||[]).map(([a,b])=>`<p><strong>${html(a)}</strong> : ${html(b)}</p>`).join("")}${[].concat(x.texte).map(t=>`<p>${html(t)}</p>`).join("")}${x.source?`<p><em>Source: ${html(x.source)}</em></p>`:""}</div>
   <div class="refs"><a class="chip" href="#/${slug(e.nom)}/${k==="don"?"dons":"heritages"}"><small>Retour</small>${k==="don"?"Dons":"Héritages"} · ${html(e.nom)}</a>${L.length>1?`<a class="chip" href="${u(p)}"><small>Précédent</small>${html(p.titre)}</a><a class="chip" href="${u(n)}"><small>Suivant</small>${html(n.titre)}</a>`:""}</div>`;
 }
 function route(){
