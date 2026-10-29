@@ -115,6 +115,73 @@ a{color:inherit}
 @media (max-width:900px){.tabs{flex-wrap:nowrap;overflow-x:auto}.entry-grid{grid-template-columns:minmax(0,1fr) 230px;gap:22px}.infobox dl{grid-template-columns:minmax(0,1fr);gap:0;padding:12px 14px}.infobox dt{padding:8px 0 0}.infobox dd{padding-bottom:2px}.ib-head{padding:12px 14px}.page{padding-top:24px}}
 @media (max-width:640px){.entry-grid{grid-template-columns:minmax(0,1fr);gap:24px}.col{display:contents}.infobox{order:1}.body{order:2}.infobox .card-img{aspect-ratio:16/7;max-height:200px}.infobox .card-img img{object-position:50% 25%}.infobox .card-img span{font-size:2.5rem}.infobox dl{grid-template-columns:minmax(90px,38%) minmax(0,1fr);gap:10px 14px;padding:16px}.infobox dt{padding-top:3px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+/* ===== Ajustements responsive ===== */
+
+/* Tailles de texte qui s'adaptent à l'écran */
+.prose{font-size:clamp(1.2rem,1.05rem + .6vw,1.45rem)}
+.lede{font-size:clamp(1.2rem,1.05rem + .5vw,1.45rem)}
+.tagline{font-size:clamp(1.15rem,1rem + .5vw,1.4rem)}
+.dons,.infobox dd,.card p{font-size:clamp(1.1rem,1rem + .4vw,1.25rem)}
+
+/* Titre d'accueil : pas de débordement */
+.pagehead h1{overflow-wrap:anywhere}
+
+/* Hauteur d'écran correcte sur mobile */
+.page{min-height:100vh;min-height:100dvh}
+
+/* Pas d'effet de survol sur les écrans tactiles */
+@media (hover:none){
+  .card:hover{transform:none}
+  .card:hover .card-img img{transform:none}
+}
+
+/* Tablette : une seule colonne plus tôt */
+@media (max-width:800px){
+  .entry-grid{grid-template-columns:minmax(0,1fr);gap:24px}
+  .col{display:contents}
+  .infobox{order:1}
+  .body{order:2}
+  .infobox dl{grid-template-columns:minmax(90px,38%) minmax(0,1fr);gap:10px 14px;padding:16px}
+  .infobox dt{padding-top:3px}
+  .infobox .card-img{aspect-ratio:16/7;max-height:200px}
+  .infobox .card-img img{object-position:50% 25%}
+  .infobox .card-img span{font-size:2.5rem}
+}
+
+/* Mobile : les tableaux deviennent des cartes empilées */
+@media (max-width:640px){
+  .dons thead{display:none}
+  .dons,.dons tbody,.dons tr,.dons td{display:block;width:100%}
+  .dons tr{padding:12px 14px;border-bottom:1px solid var(--line)}
+  .dons tbody tr:last-child{border-bottom:0}
+  .dons th,.dons td{padding:2px 0;border:0}
+  .dons .d-lvl{width:auto}
+  .dons .d-src{white-space:normal}
+  .herit .d-name{width:100%;min-width:0}
+  .herit .h-txt{min-width:0}
+}
+
+/* Cibles tactiles plus confortables */
+@media (pointer:coarse){
+  .f-btn,.filtres input[type=search],.filtres select{height:44px}
+  .tabs a{padding-block:14px}
+  .f-chk input{width:20px;height:20px}
+}
+
+/* Image de la fiche d'espèce */
+@media (max-width:800px){
+  .infobox .card-img{aspect-ratio:auto;max-height:none}
+  .infobox .card-img img{
+    width:auto;
+    max-width:100%;
+    height:auto;
+    max-height:min(60vh,420px);
+    margin-inline:auto;
+    object-fit:contain;
+  }
+  /* S'il n'y a pas d'image : la lettre sur fond coloré garde un bandeau */
+  .infobox .card-img:not(:has(img)){aspect-ratio:16/7;max-height:200px}
+}
 </style>
 </head>
 <body>
