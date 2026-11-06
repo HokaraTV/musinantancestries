@@ -185,5 +185,5 @@ const KRALEI_DONS = [
     ],
     meta: [],
     detail: true,
-  }
+  },
 ];
