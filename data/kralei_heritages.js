@@ -1,70 +1,73 @@
 const KRALEI_HERITAGES = [
   {
-    titre: "Ancient-Blooded Dwarf",
-    source: "Player Core pg. 43",
+    titre: "Battle-Ready Kralei",
+    source: "",
     texte: [
-      "Dwarven heroes of old could shrug off their enemies’ magic, and some of that resistance manifests in you. You gain the Call on Ancient Blood reaction.",
-      "Call on Ancient Blood (reaction). Trigger: You attempt a saving throw against a magical effect, but you haven’t rolled yet. Your ancestors’ innate resistance to magic surges, before slowly ebbing down. You gain a +1 circumstance bonus until the end of this turn. This bonus also applies to the triggering save.",
-      "Feats requiring this heritage: Kneel for No God.",
+      "You descend from a line of terrifying battlefield commanders. You become trained in Intimidation, and you gain the Intimidating Glare skill feat.",
     ],
   },
   {
-    titre: "Anvil Dwarf",
-    source: "Character Guide pg. 19",
-    legacy: true,
+    titre: "Climbing Kralei",
+    source: "",
+    legacy: false,
     texte:
-      "You are a descendant of a famed crafter and have your own amazing talent. Other dwarves might consider this a blessing from your ancestors or from the Forgefather himself, depending on where you grew up. You become trained in Crafting (or another skill if you were already trained in Crafting) and gain the Specialty Crafting skill feat, but you can pick two different specialties instead of one.",
-  },
-  {
-    titre: "Death Warden Dwarf",
-    source: "Player Core pg. 43",
-    texte: [
-      "Your ancestors were tomb guardians, and their power to ward off death passed on to you. If you roll a success on a saving throw against an effect that has the void trait or was created by an undead creature, you get a critical success instead.",
-      "Feats requiring this heritage: Tomb-Watcher’s Glare.",
+    [
+      "You are a descendant of a famed crafter and have your own amazing talent.", 
+      "Other dwarves might consider this a blessing from your ancestors or from the Forgefather himself, depending on where you grew up.",
+      "You become trained in Crafting (or another skill if you were already trained in Crafting) and gain the Specialty Crafting skill feat, but you can pick two different specialties instead of one."
     ],
   },
   {
-    titre: "Elemental Heart Dwarf",
-    source: "Character Guide pg. 19",
-    legacy: true,
+    titre: "Fey-Touched Kralei",
+    source: "",
     texte: [
-      "Whether through a connection to Torag’s forge, the azers of the Plane of Fire, or another source, you can exude a burst of energy. Mbe’ke and Taralu dwarves of the Mwangi Expanse believe this heritage is a gift from dragons or elemental spirits. Choose one of the following damage types: acid, cold, electricity, or fire. Once chosen, this can’t be changed. You gain the Energy Emanation activity.",
-      "Energy Emanation (two actions; Evocation, Primal; Frequency once per day). Energy bursts forth from your body. You deal 1d6 damage of your chosen type to all adjacent creatures (basic Reflex save using your class DC or spell DC, whichever is higher). At 3rd level, and every 2 levels thereafter, this damage increases by 1d6.",
-      "Feats requiring this heritage: Energy Blessed.",
+      "The blood of the fey flows through your veins, saturating you with their magic and making you truly one of them.", ,
+      "You gain the fey trait, in addition to the kraleir and humanoid traits.","Choose one cantrip from the primal spell list.",
+      "You can cast this spell as a primal innate spell at will. A cantrip is heightened to a spell rank equal to half your level rounded up.",
+      "You can change this cantrip to a different one from the same list once per day by meditating to realign yourself with your fey heritage; this is a 10-minute activity that has the concentrate trait.",
     ],
   },
   {
-    titre: "Forge Dwarf",
-    source: "Player Core pg. 43",
-    texte:
-      "You have a remarkable adaptation to hot environments. This grants you fire resistance equal to half your level (minimum 1), and you treat environmental heat effects as if they were one step less extreme (incredible heat becomes extreme, extreme heat becomes severe, and so on).",
-  },
-  {
-    titre: "Forge-Blessed Dwarf",
-    source: "Highhelm pg. 109",
-    legacy: true,
+    titre: "Hold-Scarred Kralei",
+    source: "",
+    legacy: false,
     texte: [
-      "PFS Note: A Forge-Blessed dwarf can use their granted 1st-level spell once per scenario.",
-      "You are from a family in Highhelm that venerates a particular dwarven deity above all others. Your birth was blessed by your family’s patron deity, granting you a fraction of their power. Choose one deity from the dwarven pantheon. You can cast the 1st-level spell they grant clerics (such as soothe if your family’s patron is Bolka) as an innate divine spell once per week.",
+     "You are part of an orc community that participates in ritual scarification or tattooing.",
+     "The marks on your skin show your exceptional hardiness and vitality.",
+     "You gain 10 Hit Points from your ancestry instead of 8. You also gain the Diehard feat."
+
     ],
   },
   {
-    titre: "Oathkeeper Dwarf",
-    source: "Character Guide pg. 19",
-    legacy: true,
+    titre: "Rainfall Kralei",
+    source: "",
     texte:
-      "Growing up, you never tried to lie to get what you wanted, and even when necessary, lying makes you uncomfortable. The especially faithful might even have thought that you were blessed by the dwarven god of duty, Kols. You gain a +1 circumstance bonus to Perception checks to Sense Motive and to Perception DCs against attempts to Lie to you. Furthermore, you gain a +2 circumstance bonus to Diplomacy checks to convince others you speak the truth when you are telling the truth, and you take a –4 circumstance penalty to Lie and to your Deception DC against Sense Motive.",
+     [
+      "You were born in a rain forest with only tangles of trees providing protection from torrential rainstorms and flash floods.", 
+      "You've learned to move adeptly through jungle terrain and resist the various ailments common in humid environs.",
+      "You gain a +2 circumstance bonus to Athletics checks to Climb or Swim and a +1 circumstance bonus to saving throws against diseases."
+     ],
   },
   {
-    titre: "Rock Dwarf",
-    source: "Player Core pg. 43",
-    texte:
-      "Your ancestors lived and worked among the ancient stones of the mountains or the depths of the earth. This makes you solid as a rock when you plant your feet. You gain a +2 circumstance bonus to your Fortitude or Reflex DC against attempts to Reposition, Shove, or Trip you. This bonus also applies to saving throws against spells or effects that attempt to force you to move or knock you prone. In addition, if any effect would force you to move 10 feet or more, you are moved only half the distance.",
+    titre: "Sage Kralei",
+    source: "",
+    legacy: false,
+    texte: [
+    "You were tasked with keeping oral and stitched histories for your family, your clan, or even an entire settlement.", 
+    "You are trained in Society. You also gain the Additional Lore general feat for a lore skill of your choice."
+    ],
   },
   {
-    titre: "Strong-Blooded Dwarf",
-    source: "Player Core pg. 43",
+    titre: "Warrior Kralei",
+    source: "",
+    legacy: false,
     texte:
-      "Your blood runs hearty and strong, and you can shake off toxins. You gain poison resistance equal to half your level (minimum 1), and each of your successful saving throws against a poison affliction reduces its stage by 2, or by 1 for a virulent poison. Each critical success against an ongoing poison reduces its stage by 3, or by 2 for a virulent poison.",
+     "Your hardier body made you a perfect recruit for combat. The damage die for your fist increases to 1d6. You don't take a penalty when making a lethal attack with your fist."
+  },
+  {
+    titre: "Winter Kralei",
+    source: "",
+    texte:
+    "Your ancestors survived in cold climates. You become trained in Survival, and you treat environmental cold effects as if they were one step less extreme (incredible cold becomes extreme, extreme cold becomes severe, and so on)."
   },
 ];
